@@ -29,7 +29,7 @@ class Arrow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: 'welcome',
+      initialRoute: (FirebaseAuth.instance.currentUser != null)?'createProfile':'welcome',
       routes: {
         'welcome': (context) => const WelcomeScreen(),
         'auth': (context) => AuthScreen(),
